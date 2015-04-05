@@ -15,3 +15,9 @@ Setup is based on Mac
 No need
 #### Run test
   ruby -Ilib:test ruby/001_fibonacci_sequence_test.rb
+
+### Javascript
+#### Install
+brew install node
+#### Run test
+  node javascript/001_fibonacci_sequence_test.js
