@@ -21,3 +21,13 @@ No need
 brew install node
 #### Run test
   node javascript/001_fibonacci_sequence_test.js
+
+### C#
+#### Install
+Visit http://www.mono-project.com/download/
+Click 'Download Mono MDK' and install
+#### Run test
+  mcs -t:library csharp/001FibonacciSequence.cs
+  mcs -t:library -r:nunit.framework,csharp/001FibonacciSequence csharp/001FibonacciSequenceTest.cs
+  nunit-console csharp/001FibonacciSequenceTest.dll
+  rm csharp/001FibonacciSequence.dll csharp/001FibonacciSequenceTest.dll TestResult.xml
