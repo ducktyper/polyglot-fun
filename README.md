@@ -31,3 +31,9 @@ Click 'Download Mono MDK' and install
   mcs -t:library -r:nunit.framework,csharp/001FibonacciSequence csharp/001FibonacciSequenceTest.cs
   nunit-console csharp/001FibonacciSequenceTest.dll
   rm csharp/001FibonacciSequence.dll csharp/001FibonacciSequenceTest.dll TestResult.xml
+
+### Objective-C
+#### Install
+Create a new OSX library from Xcode
+#### Run test
+xcodebuild test -scheme FibonacciSequence

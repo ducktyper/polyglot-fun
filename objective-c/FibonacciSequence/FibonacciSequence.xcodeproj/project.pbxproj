@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEE85DAF1AD6A1660066176C /* FibonacciSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE85DAE1AD6A1660066176C /* FibonacciSequence.h */; };
+		EEE85DB11AD6A1660066176C /* FibonacciSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE85DB01AD6A1660066176C /* FibonacciSequence.m */; };
+		EEE85DB71AD6A1660066176C /* libFibonacciSequence.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE85DAB1AD6A1660066176C /* libFibonacciSequence.dylib */; };
+		EEE85DC61AD6A18A0066176C /* FibonacciSequenceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE85DC51AD6A18A0066176C /* FibonacciSequenceTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEE85DB81AD6A1660066176C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEE85DA31AD6A1660066176C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEE85DAA1AD6A1660066176C;
+			remoteInfo = FibonacciSequence;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EEE85DAB1AD6A1660066176C /* libFibonacciSequence.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libFibonacciSequence.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE85DAE1AD6A1660066176C /* FibonacciSequence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FibonacciSequence.h; sourceTree = "<group>"; };
+		EEE85DB01AD6A1660066176C /* FibonacciSequence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FibonacciSequence.m; sourceTree = "<group>"; };
+		EEE85DB61AD6A1660066176C /* FibonacciSequenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FibonacciSequenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE85DBC1AD6A1660066176C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE85DC51AD6A18A0066176C /* FibonacciSequenceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FibonacciSequenceTest.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEE85DA81AD6A1660066176C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE85DB31AD6A1660066176C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE85DB71AD6A1660066176C /* libFibonacciSequence.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEE85DA21AD6A1660066176C = {
+			isa = PBXGroup;
+			children = (
+				EEE85DAD1AD6A1660066176C /* FibonacciSequence */,
+				EEE85DBA1AD6A1660066176C /* FibonacciSequenceTests */,
+				EEE85DAC1AD6A1660066176C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEE85DAC1AD6A1660066176C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE85DAB1AD6A1660066176C /* libFibonacciSequence.dylib */,
+				EEE85DB61AD6A1660066176C /* FibonacciSequenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE85DAD1AD6A1660066176C /* FibonacciSequence */ = {
+			isa = PBXGroup;
+			children = (
+				EEE85DAE1AD6A1660066176C /* FibonacciSequence.h */,
+				EEE85DB01AD6A1660066176C /* FibonacciSequence.m */,
+			);
+			path = FibonacciSequence;
+			sourceTree = "<group>";
+		};
+		EEE85DBA1AD6A1660066176C /* FibonacciSequenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEE85DC51AD6A18A0066176C /* FibonacciSequenceTest.m */,
+				EEE85DBB1AD6A1660066176C /* Supporting Files */,
+			);
+			path = FibonacciSequenceTests;
+			sourceTree = "<group>";
+		};
+		EEE85DBB1AD6A1660066176C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEE85DBC1AD6A1660066176C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EEE85DA91AD6A1660066176C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE85DAF1AD6A1660066176C /* FibonacciSequence.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EEE85DAA1AD6A1660066176C /* FibonacciSequence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE85DBF1AD6A1660066176C /* Build configuration list for PBXNativeTarget "FibonacciSequence" */;
+			buildPhases = (
+				EEE85DA71AD6A1660066176C /* Sources */,
+				EEE85DA81AD6A1660066176C /* Frameworks */,
+				EEE85DA91AD6A1660066176C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FibonacciSequence;
+			productName = FibonacciSequence;
+			productReference = EEE85DAB1AD6A1660066176C /* libFibonacciSequence.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		EEE85DB51AD6A1660066176C /* FibonacciSequenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE85DC21AD6A1660066176C /* Build configuration list for PBXNativeTarget "FibonacciSequenceTests" */;
+			buildPhases = (
+				EEE85DB21AD6A1660066176C /* Sources */,
+				EEE85DB31AD6A1660066176C /* Frameworks */,
+				EEE85DB41AD6A1660066176C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEE85DB91AD6A1660066176C /* PBXTargetDependency */,
+			);
+			name = FibonacciSequenceTests;
+			productName = FibonacciSequenceTests;
+			productReference = EEE85DB61AD6A1660066176C /* FibonacciSequenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEE85DA31AD6A1660066176C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "polyglot-fun";
+				TargetAttributes = {
+					EEE85DAA1AD6A1660066176C = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EEE85DB51AD6A1660066176C = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = EEE85DA61AD6A1660066176C /* Build configuration list for PBXProject "FibonacciSequence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEE85DA21AD6A1660066176C;
+			productRefGroup = EEE85DAC1AD6A1660066176C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEE85DAA1AD6A1660066176C /* FibonacciSequence */,
+				EEE85DB51AD6A1660066176C /* FibonacciSequenceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEE85DB41AD6A1660066176C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEE85DA71AD6A1660066176C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE85DB11AD6A1660066176C /* FibonacciSequence.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEE85DB21AD6A1660066176C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE85DC61AD6A18A0066176C /* FibonacciSequenceTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEE85DB91AD6A1660066176C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEE85DAA1AD6A1660066176C /* FibonacciSequence */;
+			targetProxy = EEE85DB81AD6A1660066176C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EEE85DBD1AD6A1660066176C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EEE85DBE1AD6A1660066176C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EEE85DC01AD6A1660066176C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EEE85DC11AD6A1660066176C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EEE85DC31AD6A1660066176C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FibonacciSequenceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EEE85DC41AD6A1660066176C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FibonacciSequenceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEE85DA61AD6A1660066176C /* Build configuration list for PBXProject "FibonacciSequence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE85DBD1AD6A1660066176C /* Debug */,
+				EEE85DBE1AD6A1660066176C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE85DBF1AD6A1660066176C /* Build configuration list for PBXNativeTarget "FibonacciSequence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE85DC01AD6A1660066176C /* Debug */,
+				EEE85DC11AD6A1660066176C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE85DC21AD6A1660066176C /* Build configuration list for PBXNativeTarget "FibonacciSequenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE85DC31AD6A1660066176C /* Debug */,
+				EEE85DC41AD6A1660066176C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEE85DA31AD6A1660066176C /* Project object */;
+}
