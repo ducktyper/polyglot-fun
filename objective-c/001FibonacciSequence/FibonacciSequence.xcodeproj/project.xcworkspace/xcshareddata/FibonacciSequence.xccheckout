@@ -14,7 +14,7 @@
 		<string>https://github.com/ducktyper/polyglot-fun.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>objective-c/FibonacciSequence/FibonacciSequence.xcodeproj</string>
+	<string>objective-c/001FibonacciSequence/FibonacciSequence.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3B8A9D7351201B9E3C5B85D12E375DCBBBD08A4E</key>
