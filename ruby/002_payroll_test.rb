@@ -86,23 +86,60 @@ class TestPayroll < Minitest::Test
   end
   def test_add_timecard
     add_hourly_employee
-    timecard = Timecard.new(date: 20150101, hours: 2.5)
-    subject.add_timecard employee_id: employee.id, timecard: timecard
-    assert_equal timecard, employee.classification.timecards.last
+    subject.add_timecard employee_id: employee.id, date: 20150101, hours: 2.5
+    assert_equal 20150101, employee.classification.timecards.last.date
+    assert_equal 2.5, employee.classification.timecards.last.hours
   end
   def test_add_sales_receipt
     subject.add_commissioned_employee(base_hash.merge(
       salary: 45000, commission_rate: 10))
-    receipt = SalesReceipt.new(date: 20150101, amount: 100)
-    subject.add_sales_receipt employee_id: employee.id, sales_receipt: receipt
-    assert_equal receipt, employee.classification.sales_receipts.last
+    subject.add_sales_receipt(
+      employee_id: employee.id, date: 20150101, amount: 100)
+    assert_equal 20150101, employee.classification.sales_receipts.last.date
+    assert_equal 100, employee.classification.sales_receipts.last.amount
   end
   def test_add_service_charage
     subject.add_hourly_employee(base_hash.merge(
       hourly_rate: 10.5, affiliation: UnionAffiliation.new(2)))
-    charge = ServiceCharge.new(date: 20150101, amount: 100)
-    subject.add_service_charge(employee_id: employee.id, service_charge: charge)
-    assert_equal charge, employee.affiliation.service_charges.last
+    subject.add_service_charge(
+      employee_id: employee.id, date: 20150101, amount: 100)
+    assert_equal 20150101, employee.affiliation.service_charges.last.date
+    assert_equal 100, employee.affiliation.service_charges.last.amount
+  end
+  def test_weekly_is_payday?
+    friday = 20150102
+    assert_equal true, Weekly.new.is_payday?(friday)
+    assert_equal false, Weekly.new.is_payday?(friday + 1)
+  end
+  def test_monthly_is_payday?
+    last_day_of_month = 20150131
+    assert_equal true, Monthly.new.is_payday?(last_day_of_month)
+    assert_equal false, Monthly.new.is_payday?(20150201)
+  end
+  def test_biweekly_is_payday?
+    odd_friday = 20150102
+    even_friday = 20150108
+    assert_equal true, Biweekly.new.is_payday?(odd_friday)
+    assert_equal false, Biweekly.new.is_payday?(20150103)
+    assert_equal false, Biweekly.new.is_payday?(even_friday)
+  end
+  def test_payday_for_hourly_employee_at_payday
+    add_hourly_employee
+    subject.add_timecard(employee_id: employee.id, date: 20150101, hours: 2.5)
+    subject.payday(20150102)
+    assert_equal 10.5 * 2.5, Database[employee.id].account
+  end
+  def test_payday_for_hourly_employee_at_payday_clear_timecards
+    add_hourly_employee
+    subject.add_timecard(employee_id: employee.id, date: 20150101, hours: 2.5)
+    subject.payday(20150102)
+    assert_equal 0, Database[employee.id].classification.timecards.size
+  end
+  def test_payday_for_hourly_employee_at_none_payday
+    add_hourly_employee
+    subject.add_timecard(employee_id: employee.id, date: 20150101, hours: 2.5)
+    subject.payday(20150103)
+    assert_equal 0, Database[employee.id].account
   end
 
   private

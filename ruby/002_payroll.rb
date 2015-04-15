@@ -1,7 +1,16 @@
 require 'set'
 require 'ostruct'
 
-Employee = OpenStruct
+class Employee < OpenStruct
+  attr_reader :account
+  def initialize(*args)
+    super(*args)
+    @account = 0.0
+  end
+  def pay
+    @account += classification.calculate_pay
+  end
+end
 Database = {}
 
 class Payroll
@@ -38,14 +47,20 @@ class Payroll
   def change_to_no_affiliation(employee_id:)
     Database[employee_id].affiliation = NoAffiliation.new
   end
-  def add_timecard(employee_id:, timecard:)
+  def add_timecard(employee_id:, date:, hours:)
+    timecard = Timecard.new date: date, hours: hours
     Database[employee_id].classification.timecards.push timecard
   end
-  def add_sales_receipt(employee_id:, sales_receipt:)
-    Database[employee_id].classification.sales_receipts.push sales_receipt
+  def add_sales_receipt(employee_id:, date:, amount:)
+    receipt = SalesReceipt.new date: date, amount: amount
+    Database[employee_id].classification.sales_receipts.push receipt
   end
-  def add_service_charge(employee_id:, service_charge:)
-    Database[employee_id].affiliation.service_charges.push service_charge
+  def add_service_charge(employee_id:, date:, amount:)
+    charge = ServiceCharge.new date: date, amount: amount
+    Database[employee_id].affiliation.service_charges.push charge
+  end
+  def payday date
+    Database.each {|_, v| v.pay if v.schedule.is_payday?(date)}
   end
 
   private
@@ -74,12 +89,19 @@ class Hourly
     @hourly_rate = hourly_rate
     @timecards = []
   end
+  def calculate_pay
+    total_hours = @timecards.map(&:hours).inject(:+)
+    @timecards.clear
+    total_hours * hourly_rate
+  end
 end
 Timecard = OpenStruct
 class Salaried
   attr_reader :salary
   def initialize(salary)
     @salary = salary
+  end
+  def calculate_pay
   end
 end
 class Commissioned
@@ -88,6 +110,8 @@ class Commissioned
     @salary = salary
     @commission_rate = commission_rate
     @sales_receipts = []
+  end
+  def calculate_pay
   end
 end
 SalesReceipt = OpenStruct
@@ -111,9 +135,29 @@ class HoldMethod
 end
 MailMethod = Struct.new(:address)
 
+class IntDate
+  def initialize(date_int)
+    @date_int = date_int
+  end
+  def time
+    @date_int.to_s =~ /^(\d\d\d\d)(\d\d)(\d\d)$/
+    Time.utc($1, $2, $3)
+  end
+end
+
 class Weekly
+  def is_payday? date
+    IntDate.new(date).time.friday?
+  end
 end
 class Monthly
+  def is_payday? date
+    (IntDate.new(date).time + 24 * 60 * 60).day == 1
+  end
 end
 class Biweekly
+  def is_payday? date
+    IntDate.new(date).time.friday? &&
+    (IntDate.new(date).time.to_i / (24 * 60 * 60)).odd?
+  end
 end
