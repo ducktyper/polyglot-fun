@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "001_fibonacci_sequence.h"
 
 int fibonacci(int index)

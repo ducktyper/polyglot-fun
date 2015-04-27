@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <assert.h>
 #include "001_fibonacci_sequence.h"
 
