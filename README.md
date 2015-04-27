@@ -37,3 +37,10 @@ Click 'Download Mono MDK' and install
 Create a new OSX library from Xcode
 #### Run test
 xcodebuild test -scheme FibonacciSequence
+
+### C
+#### Install
+No need
+#### Run test
+!gcc -Wall fibonacci_sequence_test.c fibonacci_sequence.c -o fibonacci_sequence.out
+rm fibonacci_sequence.out']
