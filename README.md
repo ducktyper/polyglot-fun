@@ -42,5 +42,5 @@ xcodebuild test -scheme FibonacciSequence
 #### Install
 No need
 #### Run test
-!gcc -Wall fibonacci_sequence_test.c fibonacci_sequence.c -o fibonacci_sequence.out
+gcc -Wall fibonacci_sequence_test.c fibonacci_sequence.c -o fibonacci_sequence.out
 rm fibonacci_sequence.out']
