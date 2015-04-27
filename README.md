@@ -22,7 +22,7 @@ brew install node
 #### Run test
   node javascript/001_fibonacci_sequence_test.js
 
-### C#
+### C&#35;
 #### Install
 Visit http://www.mono-project.com/download/
 Click 'Download Mono MDK' and install
